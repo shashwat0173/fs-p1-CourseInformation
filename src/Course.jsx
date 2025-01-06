@@ -1,9 +1,10 @@
 import Part from './Part'
 
 const Course = (props) => {
+    console.log('Course Component', props)
     return (
         <>
-            {props.topicList.map((topic, index) => <Part key={index} topic = {topic.name} exercises = {topic.exercises}/>)}
+            {props.parts.map((part, index) => <Part key={index} name = {part.name} exercises = {part.exercises}/>)}
         </>
 
     )
