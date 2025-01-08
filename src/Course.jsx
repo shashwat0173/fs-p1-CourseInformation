@@ -1,10 +1,15 @@
-import Part from './Part'
+import Header from "./Header"
+import Content from "./Content"
+import Total from "./Total"
 
 const Course = (props) => {
     console.log('Course Component', props)
+    const {course} = props
     return (
         <>
-            {props.parts.map((part, index) => <Part key={index} name = {part.name} exercises = {part.exercises}/>)}
+            <Header course = {course.name}/>
+            <Content parts = {course.parts}/>
+            <Total total={course.parts.reduce((sum, course) => sum + course.exercises, 0)}/>
         </>
 
     )

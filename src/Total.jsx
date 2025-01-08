@@ -2,7 +2,7 @@ const Total = (props) => {
     console.log('Total Component', props)
     return (
         <>
-            <p>Number of exercises {props.total}</p>
+            <p><b>total of {props.total} exercises</b></p>
         </>
     )
 }
